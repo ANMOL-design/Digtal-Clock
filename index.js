@@ -36,11 +36,11 @@ function Updater() {
     var AM = a[1];
 
 
-    if (hour > 4 && hour < 11 && AM == "AM") {
+    if (hour > 4 && hour < 11) {
         document.getElementsByClassName("greetings-text")[0].innerHTML = "Good Morning !!"
-    } else if (hour > 0 && hour < 6 && AM == "PM") {
+    } else if (hour >= 12 && hour < 18) {
         document.getElementsByClassName("greetings-text")[0].innerHTML = "Good Afternoon !!"
-    } else if (hour >= 8 && hour <= 12 && AM == "PM") {
+    } else if (hour >= 20 && hour < 24) {
         document.getElementsByClassName("greetings-text")[0].innerHTML = "Good Night !!"
     } else {
         document.getElementsByClassName("greetings-text")[0].innerHTML = "Good Day !!"
